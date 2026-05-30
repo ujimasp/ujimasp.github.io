@@ -4,12 +4,115 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects — Ujima S&P</title>
-  <meta name="description" content="Research projects from the Ujima Security and Privacy Research Group."/>
+  <meta name="description" content="Research projects from the Ujima Security and Privacy Research Group at UC San Diego."/>
   <link rel="icon" href="assets/logo.png"/>
   <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    /* ── Pillar block ── */
+    .pillar {
+      margin-bottom: 72px;
+    }
+
+    .pillar-header {
+      display: grid;
+      grid-template-columns: 4px 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .pillar-accent {
+      width: 4px;
+      height: 100%;
+      min-height: 60px;
+      border-radius: 2px;
+    }
+
+    .pillar-number {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--muted-2);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .pillar-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .pillar-desc {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      line-height: 1.85;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    /* ── Project cards within a pillar ── */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-dim);
+      padding: 20px 22px;
+      position: relative;
+      transition: border-color 0.25s;
+    }
+
+    .project-card:hover {
+      border-color: var(--border);
+    }
+
+    .project-card-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .project-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+    }
+
+    /* cross-pillar tag */
+    .cross-pill {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .project-grid { grid-template-columns: 1fr; }
+      .pillar-title { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ─── Navigation ─────────────────────────────────────────── -->
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
@@ -32,115 +135,303 @@
   </div>
 </nav>
 
+<!-- ─── Page Header ─────────────────────────────────────────── -->
+<main id="main-content">
 <div class="page-wrap">
   <div class="page-header">
     <div class="page-header-tag">What We're Working On</div>
-    <h1>Our <span>Projects</span></h1>
-    <p>From privacy risk assessments to inclusive security tooling, our projects are built in collaboration with the communities they're meant to serve.</p>
+    <h1>Our <span>Research</span></h1>
+    <p>Our work is organized around five interconnected research pillars — each one grounded in the communities most affected by gaps in security, privacy, and technological equity.</p>
   </div>
 
-  <!-- ─── Active Projects ──────────────────────────────────── -->
-  <div class="section-label" style="margin-bottom:20px;">Active Projects</div>
-
-  <div style="display:flex; flex-direction:column; gap:20px; margin-bottom:56px;">
-
-    <!-- Project placeholder template — duplicate and fill in -->
-    <div class="card" style="padding:28px 32px;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-        <div>
-          <div class="card-tag">Privacy · Marginalized Communities</div>
-          <div class="card-title" style="font-size:18px;">[Project Title Placeholder]</div>
-        </div>
-        <span class="badge green">Active</span>
-      </div>
-      <div class="card-body" style="max-width:680px; margin-bottom:16px;">
-        [Project description placeholder — replace with a 2–3 sentence summary of the project's goals, methods, and intended impact.]
-      </div>
-      <div style="display:flex; gap:24px; flex-wrap:wrap;">
-        <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted);">
-          <span style="color:var(--gold);">Lead:</span> [Researcher Name]
-        </div>
-        <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted);">
-          <span style="color:var(--gold);">Started:</span> [Year]
-        </div>
+  <!-- ════════════════════════════════════════════════════════
+       PILLAR 1 — Privacy & Security for Marginalized Communities
+       ════════════════════════════════════════════════════════ -->
+  <section class="pillar" aria-labelledby="pillar-1-title">
+    <div class="pillar-header">
+      <div class="pillar-accent" style="background: var(--gold);"></div>
+      <div>
+        <div class="pillar-number">Pillar 01</div>
+        <h2 class="pillar-title" id="pillar-1-title">Privacy &amp; Security for Marginalized Communities</h2>
+        <p class="pillar-desc">
+          Security and privacy risks are not distributed equally. We study how vulnerable and historically ignored populations experience unique threats — and work to understand, document, and reduce those harms through community-centered research.
+        </p>
       </div>
     </div>
 
-    <div class="card" style="padding:28px 32px;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-        <div>
-          <div class="card-tag">Security · Equity</div>
-          <div class="card-title" style="font-size:18px;">[Project Title Placeholder]</div>
-        </div>
-        <span class="badge green">Active</span>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Mobile Technology</div>
+        <div class="project-card-title">Privacy &amp; Security in Health-Related Mobile Applications</div>
       </div>
-      <div class="card-body" style="max-width:680px; margin-bottom:16px;">
-        [Project description placeholder — replace with a 2–3 sentence summary of the project's goals, methods, and intended impact.]
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Civic Systems</div>
+        <div class="project-card-title">Security &amp; Privacy of the Voting Process Across Contexts</div>
+        <div class="cross-pill">↔ Also: Tech Policy</div>
       </div>
-      <div style="display:flex; gap:24px; flex-wrap:wrap;">
-        <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted);">
-          <span style="color:var(--gold);">Lead:</span> [Researcher Name]
-        </div>
-        <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted);">
-          <span style="color:var(--gold);">Started:</span> [Year]
-        </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Accessibility</div>
+        <div class="project-card-title">Communicating Security Threats to Users with Visual Impairments</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Education</div>
+        <div class="project-card-title">Privacy Literacy &amp; Education in Underserved Communities</div>
+        <div class="cross-pill">↔ Also: Community Engagement</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Emerging Technology</div>
+        <div class="project-card-title">Privacy Implications of AI-Powered Systems</div>
+        <div class="cross-pill">↔ Also: AI &amp; Human Decision-Making</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PILLAR 2 — Bias, Fairness & Representation in AI/ML
+       ════════════════════════════════════════════════════════ -->
+  <section class="pillar" aria-labelledby="pillar-2-title">
+    <div class="pillar-header">
+      <div class="pillar-accent" style="background: var(--green);"></div>
+      <div>
+        <div class="pillar-number">Pillar 02</div>
+        <h2 class="pillar-title" id="pillar-2-title">Bias, Fairness &amp; Representation in AI/ML</h2>
+        <p class="pillar-desc">
+          AI and machine learning systems often fail hardest for the communities least equipped to push back. We investigate where these failures occur, why they persist, and how to build systems that are more equitable by design.
+        </p>
       </div>
     </div>
 
-    <div class="card" style="padding:28px 32px;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-        <div>
-          <div class="card-tag">Community · Participatory Research</div>
-          <div class="card-title" style="font-size:18px;">[Project Title Placeholder]</div>
-        </div>
-        <span class="badge green">Active</span>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Computer Vision</div>
+        <div class="project-card-title">Bias &amp; Fairness in Visual Recognition Systems</div>
       </div>
-      <div class="card-body" style="max-width:680px; margin-bottom:16px;">
-        [Project description placeholder — replace with a 2–3 sentence summary of the project's goals, methods, and intended impact.]
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Computer Vision</div>
+        <div class="project-card-title">Domain Adaptation Methods to Reduce Bias in Visual Models</div>
       </div>
-      <div style="display:flex; gap:24px; flex-wrap:wrap;">
-        <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted);">
-          <span style="color:var(--gold);">Lead:</span> [Researcher Name]
-        </div>
-        <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted);">
-          <span style="color:var(--gold);">Started:</span> [Year]
-        </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Large Language Models</div>
+        <div class="project-card-title">Measuring Bias &amp; Fairness in Large Language Models</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Large Language Models</div>
+        <div class="project-card-title">The Role of Language in LLM Bias &amp; Representation</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Data &amp; Infrastructure</div>
+        <div class="project-card-title">Dataset Development for Underrepresented Communities &amp; Languages</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">AI Alignment</div>
+        <div class="project-card-title">Reducing Harmful Rhetoric Toward Neurodivergent Communities in AI Systems</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PILLAR 3 — AI, Cognition & Human Decision-Making
+       ════════════════════════════════════════════════════════ -->
+  <section class="pillar" aria-labelledby="pillar-3-title">
+    <div class="pillar-header">
+      <div class="pillar-accent" style="background: var(--gold);"></div>
+      <div>
+        <div class="pillar-number">Pillar 03</div>
+        <h2 class="pillar-title" id="pillar-3-title">AI, Cognition &amp; Human Decision-Making</h2>
+        <p class="pillar-desc">
+          As AI becomes embedded in consequential decisions, we study how it reshapes human judgment, attention, and cognitive load — particularly in high-stakes and safety-critical environments.
+        </p>
       </div>
     </div>
 
-  </div>
+    <div class="project-grid">
 
-  <!-- ─── Completed Projects ───────────────────────────────── -->
-  <div class="section-label" style="margin-bottom:20px;">Completed Projects</div>
-
-  <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:72px;">
-
-    <div class="card" style="padding:24px 32px; opacity:0.75;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:10px;">
-        <div>
-          <div class="card-tag">[Research Area]</div>
-          <div class="card-title">[Completed Project Title Placeholder]</div>
-        </div>
-        <span class="badge">Completed</span>
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Cognitive Impact</div>
+        <div class="project-card-title">AI's Influence on Human Cognitive Ability &amp; Decision-Making</div>
       </div>
-      <div class="card-body" style="max-width:680px;">[Project description placeholder]</div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Safety-Critical Systems</div>
+        <div class="project-card-title">Cybersecurity Concerns in High-Stakes Operational Environments</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Content &amp; Trust</div>
+        <div class="project-card-title">Human Oversight &amp; Decision-Making in Content Moderation</div>
+        <div class="cross-pill">↔ Also: Tech Policy</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PILLAR 4 — Tech Policy & Civic Technology
+       ════════════════════════════════════════════════════════ -->
+  <section class="pillar" aria-labelledby="pillar-4-title">
+    <div class="pillar-header">
+      <div class="pillar-accent" style="background: var(--green);"></div>
+      <div>
+        <div class="pillar-number">Pillar 04</div>
+        <h2 class="pillar-title" id="pillar-4-title">Tech Policy &amp; Civic Technology</h2>
+        <p class="pillar-desc">
+          Research only goes so far without policy. We study the intersection of technology and law — examining how policy shapes who is protected, who is exposed, and who gets left out entirely.
+        </p>
+      </div>
     </div>
 
-    <div class="card" style="padding:24px 32px; opacity:0.75;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:10px;">
-        <div>
-          <div class="card-tag">[Research Area]</div>
-          <div class="card-title">[Completed Project Title Placeholder]</div>
-        </div>
-        <span class="badge">Completed</span>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Voting &amp; Democracy</div>
+        <div class="project-card-title">Technology Policy in Electoral Systems &amp; Voting Rights</div>
+        <div class="cross-pill">↔ Also: Privacy &amp; Security</div>
       </div>
-      <div class="card-body" style="max-width:680px;">[Project description placeholder]</div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Labor</div>
+        <div class="project-card-title">Technology's Role in Labor Rights &amp; Worker Protections</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Bodily Autonomy</div>
+        <div class="project-card-title">Policy Implications of Technology in Reproductive Rights Contexts</div>
+        <div class="cross-pill">↔ Also: Privacy &amp; Security</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">AI Governance</div>
+        <div class="project-card-title">Emerging Policy Frameworks for Artificial Intelligence</div>
+        <div class="cross-pill">↔ Also: AI &amp; Decision-Making</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--green);">Content Regulation</div>
+        <div class="project-card-title">Policy &amp; Governance of Online Content Moderation</div>
+        <div class="cross-pill">↔ Also: AI &amp; Decision-Making</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PILLAR 5 — Community Engagement & Technology Education
+       ════════════════════════════════════════════════════════ -->
+  <section class="pillar" aria-labelledby="pillar-5-title">
+    <div class="pillar-header">
+      <div class="pillar-accent" style="background: var(--gold);"></div>
+      <div>
+        <div class="pillar-number">Pillar 05</div>
+        <h2 class="pillar-title" id="pillar-5-title">Community Engagement &amp; Technology Education</h2>
+        <p class="pillar-desc">
+          Ujima means collective work and responsibility — and we take that literally. We don't just study communities; we build with them. From youth coding programs to tools that support nonprofits and educators, this pillar is where research meets action.
+        </p>
+      </div>
     </div>
 
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Outreach</div>
+        <div class="project-card-title">Community Outreach &amp; Civic Technology Engagement</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Adult Education</div>
+        <div class="project-card-title">Technology &amp; Digital Literacy Education for Community Members</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Youth Programs</div>
+        <div class="project-card-title">Technology Education &amp; Security Awareness for Youth</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-tag" style="color:var(--gold);">Tools for Good</div>
+        <div class="project-card-title">Building Technology Tools to Support Nonprofits &amp; Educators</div>
+      </div>
+
+    </div>
+
+    <!-- Community projects with live links -->
+    <div style="margin-top:20px; padding:24px 28px; border:1px solid var(--border); background:var(--card-bg);">
+      <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.16em; color:var(--green); text-transform:uppercase; margin-bottom:16px;">// Live Community Projects</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:16px;">
+
+        <a href="https://foodpantrysd.org" target="_blank" rel="noopener"
+           style="display:block; text-decoration:none; border:1px solid var(--border-dim); padding:16px 18px; transition:border-color 0.2s;"
+           onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+          <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:5px;">Food Pantry SD</div>
+          <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted); margin-bottom:10px; line-height:1.6;">A community resource tool connecting San Diego residents to local food pantries.</div>
+          <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--gold);">foodpantrysd.org →</div>
+        </a>
+
+        <a href="http://morethancode.ucsd.edu/" target="_blank" rel="noopener"
+           style="display:block; text-decoration:none; border:1px solid var(--border-dim); padding:16px 18px; transition:border-color 0.2s;"
+           onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+          <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:5px;">More Than Code</div>
+          <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted); margin-bottom:10px; line-height:1.6;">A UC San Diego initiative expanding technology education and opportunity beyond the classroom.</div>
+          <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--gold);">morethancode.ucsd.edu →</div>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Open Collaborations ── -->
+  <section aria-labelledby="collab-title" style="margin-bottom:56px;">
+
+    <div class="section-label" style="margin-bottom:20px;">Open to Collaboration</div>
+
+    <div style="border:1px solid var(--border); background:var(--card-bg); padding:36px 40px 32px;">
+
+      <h2 id="collab-title" style="font-size:22px; font-weight:800; color:var(--white); margin-bottom:12px; line-height:1.2;">
+        Beyond Our Current Scope
+      </h2>
+      <p style="font-family:'Space Mono',monospace; font-size:11px; line-height:1.9; color:var(--muted); max-width:640px; margin-bottom:28px;">
+        Our five pillars represent where we are — not the limits of where we're willing to go. If your work touches security, privacy, equity, or technology's impact on people, we want to hear from you.
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:12px; margin-bottom:28px;">
+
+        <div style="border:1px solid var(--border-dim); padding:16px 18px; border-style:dashed;">
+          <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.14em; color:var(--muted-2); text-transform:uppercase; margin-bottom:6px;">Your Area</div>
+          <div style="font-size:13px; font-weight:700; color:var(--muted); line-height:1.4;">Something We Haven't Thought Of Yet</div>
+          <div style="font-family:'Space Mono',monospace; font-size:10px; color:var(--muted-2); margin-top:8px; line-height:1.6;">If your work relates to equity, privacy, or security in any form — reach out.</div>
+        </div>
+
+      </div>
+
+      <a href="contact.html" class="btn-primary">Get In Touch About a Collaboration →</a>
+
+    </div>
+  </section>
+
+  <!-- ── Closing note ── -->
+  <div style="border-left:3px solid var(--green); padding:20px 24px; margin-bottom:72px; background:var(--card-bg);">
+    <div style="font-family:'Space Mono',monospace; font-size:11px; line-height:1.85; color:var(--muted);">
+      <span style="color:var(--white); font-weight:700;">Projects move.</span> We intentionally don't label work as "complete" — many projects pause, evolve, or inform new directions over time. The pillars above reflect our ongoing research commitments. For the work that has resulted in publications, see our <a href="publications.html" style="color:var(--gold); text-decoration:underline;">Publications page</a>.
+    </div>
   </div>
 
 </div>
+</main>
 
+<!-- ─── Footer ──────────────────────────────────────────────── -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-text">© 2025 Ujima S&P · UC San Diego · <a href="https://www.ujimasp.com">ujimasp.com</a></div>
@@ -149,6 +440,7 @@
       <li><a href="researchers.html">Researchers</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
+      <li><a href="community.html">Community</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
