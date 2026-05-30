@@ -4,11 +4,79 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Publications — Ujima S&P</title>
-  <meta name="description" content="Publications from the Ujima Security and Privacy Research Group."/>
+  <meta name="description" content="Publications, workshop papers, and events from the Ujima Security and Privacy Research Group."/>
   <link rel="icon" href="assets/logo.png"/>
   <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .pub-entry {
+      border-bottom: 1px solid var(--border-dim);
+      padding: 28px 0;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .pub-entry:last-child { border-bottom: none; }
+
+    .pub-meta { text-align: right; }
+    .pub-year {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .pub-venue-type {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .pub-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .pub-authors {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .pub-venue-full {
+      font-size: 11px;
+      color: var(--muted-2);
+      font-style: italic;
+    }
+
+    .event-entry {
+      border-bottom: 1px solid var(--border-dim);
+      padding: 20px 0;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .event-entry:last-child { border-bottom: none; }
+    .event-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .pub-entry, .event-entry { grid-template-columns: 1fr; gap: 8px; }
+      .pub-meta { text-align: left; }
+    }
+  </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <nav class="site-nav">
   <div class="nav-inner">
@@ -32,157 +100,348 @@
   </div>
 </nav>
 
+<main id="main-content">
 <div class="page-wrap">
+
   <div class="page-header">
     <div class="page-header-tag">Our Work</div>
     <h1>Publica<span>tions</span></h1>
-    <p>Peer-reviewed research from the Ujima S&P group. We've been building since July 2021 — every paper is a step toward more equitable security and privacy.</p>
+    <p>Peer-reviewed research, workshop papers, and community events from the Ujima S&P group. Building since July 2021 — every paper and event is a step toward more equitable security and privacy.</p>
   </div>
 
-  <!-- ─── Publication list ─────────────────────────────────── -->
-  <!--
-    HOW TO FILL IN:
-    For each publication, replace the placeholder text inside each .pub-entry.
-    Fields:
-      - [YEAR]        → e.g. 2024
-      - [Venue]       → e.g. CHI, USENIX Security, CCS, SOUPS
-      - [Venue Type]  → Conference / Workshop / Journal
-      - [Full citation title]
-      - [Author 1], [Author 2], etc.
-      - href="#"      → replace with DOI or PDF link
-  -->
+  <!-- ─── Peer-Reviewed Publications ───────────────────────── -->
+  <div class="section-label" style="margin-bottom:8px;">Peer-Reviewed Publications</div>
+  <div style="margin-bottom:48px;">
 
-  <div style="display:flex; flex-direction:column; gap:0; margin-bottom:72px;">
-
-    <!-- Publication 1 -->
-    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2026 -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2026</div>
+        <span class="badge gold">RESPECT '26</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          [Author 1], [Author 2], [Author 3], Imani N. S. Munyaka
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Conference Paper · Forthcoming</div>
+        <div class="pub-title">Centering Context in Computing Ethics Education: An Experience Report</div>
+        <div class="pub-authors">Imani Munyaka, Alexis Morales Flores, Mya Bolds</div>
+        <div class="pub-venue-full">RESPECT 2026</div>
       </div>
     </div>
 
-    <!-- Publication 2 -->
-    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2025 — LLM Spam -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge gold">WHCAIPS '25</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          [Author 1], [Author 2], Imani N. S. Munyaka
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Workshop Paper</div>
+        <div class="pub-title">The Impact of LLM Assistance on User Spam Detection</div>
+        <div class="pub-authors">Alexis Morales Flores, Jay Jhaveri, Aditya Sharma, Sarthak Rege, Imani Munyaka</div>
+        <div class="pub-venue-full">Proceedings of the 2025 Workshop on Human-Centered AI Privacy and Security, pp. 54–66</div>
       </div>
     </div>
 
-    <!-- Publication 3 -->
-    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2025 — FAccT Neurodivergence -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge gold">FAccT '25</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          [Author 1], [Author 2], Imani N. S. Munyaka
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">"I Hadn't Thought About That": Creators of Human-like AI Weigh in on Ethics &amp; Neurodivergence</div>
+        <div class="pub-authors">Naba Rizvi, Taggert Smith, Tanvi Vidyala, Mya Bolds, Harper Strickland, Andrew Begel, Rua Williams, Imani Munyaka</div>
+        <div class="pub-venue-full">Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency, pp. 3385–3399</div>
       </div>
     </div>
 
-    <!-- Publication 4 -->
-    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2025 — AUTALIC ACL -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge gold">ACL '25</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          Imani N. S. Munyaka, [Author 2], [Author 3]
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">AUTALIC: A Dataset for Anti-AUTistic Ableist Language in Context</div>
+        <div class="pub-authors">Naba Rizvi, Harper Strickland, Daniel Gitelman, Alexis Morales Flores, Tristan Cooper, Aekta Kallepalli, Akshat Alurkar, Haaset Owens, Saleha Ahmedi, Isha Khirwadkar</div>
+        <div class="pub-venue-full">Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 20999–21015</div>
       </div>
     </div>
 
-    <!-- Publication 5 -->
-    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2025 — CSCW Annotation -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge gold">CSCW '25</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          [Author 1], Imani N. S. Munyaka
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Journal Article</div>
+        <div class="pub-title">From Granular Grief to Binary Belief: A Collaborative Optimization of Annotation Techniques for Anti-Autistic Language</div>
+        <div class="pub-authors">Naba Rizvi, Alexis Morales Flores, Mohammad Rizvi, Nedjma Ousidhoum, Imani Munyaka</div>
+        <div class="pub-venue-full">Proceedings of the ACM on Human-Computer Interaction, Vol. 9, No. 7, pp. 1–23</div>
       </div>
     </div>
 
-    <!-- Publication 6 -->
-    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2025 — arXiv Ableism LLM -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge">Preprint</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          [Author 1], [Author 2], Imani N. S. Munyaka
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Preprint</div>
+        <div class="pub-title">Beyond Keywords: Evaluating Large Language Model Classification of Nuanced Ableism</div>
+        <div class="pub-authors">Naba Rizvi, Harper Strickland, Saleha Ahmedi, Aekta Kallepalli, Isha Khirwadkar, William Wu, Imani N. S. Munyaka, Nedjma Ousidhoum</div>
+        <div class="pub-venue-full">arXiv preprint arXiv:2505.20500, 2025</div>
       </div>
     </div>
 
-    <!-- Publication 7 -->
-    <div class="pub-entry" style="padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
-      <div style="text-align:right;">
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
-        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+    <!-- 2024 — Roblox -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge gold">ISTAS '24</span>
       </div>
       <div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
-        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
-          [Publication Title Placeholder — replace with full paper title]
-        </div>
-        <div style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
-          Imani N. S. Munyaka, [Author 2]
-        </div>
-        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">Parent Seeking Roblox Safety Help: Comparing Parental Roblox Concerns to Roblox Offerings</div>
+        <div class="pub-authors">Andrew Smithwick, Chuong Nguyen, Emily Gorial, Natasha Tran, Alexis Morales Flores, Imani N. S. Munyaka</div>
+        <div class="pub-venue-full">IEEE International Symposium on Technology and Society (ISTAS '24), 2024</div>
+      </div>
+    </div>
+
+    <!-- 2024 — Kenyan Loan Apps -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge gold">ISTAS '24</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">A License to Prey: Investigating the Impact of Digital Loan App Regulations on Permission Requests and Privacy Policies in the Kenyan Market</div>
+        <div class="pub-authors">Alexis Morales Flores, Michael He, William Wu, Imani N. S. Munyaka</div>
+        <div class="pub-venue-full">IEEE International Symposium on Technology and Society (ISTAS '24), 2024</div>
+      </div>
+    </div>
+
+    <!-- 2024 — CHI Robots Autism -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge gold">CHI '24</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">Are Robots Ready to Deliver Autism Inclusion?: A Critical Review</div>
+        <div class="pub-authors">Naba Rizvi, William Wu, Mya Bolds, Raunak Mondal, Andrew Begel, Imani Munyaka</div>
+        <div class="pub-venue-full">Proceedings of the ACM CHI Conference on Human Factors in Computing Systems, 2024</div>
+      </div>
+    </div>
+
+    <!-- 2024 — Spam Calls -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge gold">USEC '24</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">"I Used to Live in Florida": Exploring the Impact of Spam Call Warning Accuracy on Callee Decision-Making</div>
+        <div class="pub-authors">Imani Munyaka, Daniel A. Delgado, Juan Gilbert, Jaime Ruiz, Patrick Traynor</div>
+        <div class="pub-venue-full">Symposium on Usable Security and Privacy (USEC 2024)</div>
+      </div>
+    </div>
+
+    <!-- 2023 — CSCW Human-AI -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2023</div>
+        <span class="badge gold">CSCW '23</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Journal Article</div>
+        <div class="pub-title">Decision Making Strategies and Team Efficacy in Human-AI Teams</div>
+        <div class="pub-authors">Imani Munyaka, Zahra Ashktorab, Casey Dugan, J. Johnson, Qian Pan</div>
+        <div class="pub-venue-full">Proceedings of the ACM on Human-Computer Interaction, CSCW (2023): 1–24</div>
+      </div>
+    </div>
+
+    <!-- 2023 — SOUPS Gmail -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2023</div>
+        <span class="badge gold">SOUPS '23</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Conference Paper</div>
+        <div class="pub-title">Understanding the Viability of Gmail's Origin Indicator for Identifying the Sender</div>
+        <div class="pub-authors">Enze Liu, Lu Sun, Alex Bellon, Grant Ho, Geoffrey M. Voelker, Stefan Savage, Imani Munyaka</div>
+        <div class="pub-venue-full">Nineteenth Symposium on Usable Privacy and Security (SOUPS 2023), pp. 77–95</div>
+      </div>
+    </div>
+
+    <!-- 2022 — JOTS Misinformation -->
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2022</div>
+        <span class="badge gold">JOTS</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Journal Article</div>
+        <div class="pub-title">The Misinformation Paradox: Older Adults are Cynical about News Media, but Engage with It Anyway</div>
+        <div class="pub-authors">Imani Munyaka, E. Hargittai, Elissa Redmiles</div>
+        <div class="pub-venue-full">Journal of Online Trust and Safety, Vol. 1, No. 4</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider" style="margin: 0 0 48px;"></div>
+
+  <!-- ─── Workshop Papers ───────────────────────────────────── -->
+  <div class="section-label" style="margin-bottom:8px;">Workshop Papers</div>
+  <div style="margin-bottom:48px;">
+
+    <div class="pub-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2023</div>
+        <span class="badge green">WIPS '23</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Workshop Paper</div>
+        <div class="pub-title">Work in Progress: Privacy Protection for Children 13+ in Virtual Worlds</div>
+        <div class="pub-authors">Molly Maclaren, Jared Jose, Runpeng Jian, Zheng Zeng, Jay Jhaveri, Imani N. S. Munyaka</div>
+        <div class="pub-venue-full">8th Workshop on Inclusive Privacy and Security (WIPS), 2023</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider" style="margin: 0 0 48px;"></div>
+
+  <!-- ─── Events Hosted ─────────────────────────────────────── -->
+  <div class="section-label" style="margin-bottom:8px;">Events Hosted</div>
+  <div style="margin-bottom:72px;">
+
+    <!-- 2026 -->
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2026</div>
+        <span class="badge" style="border-color:var(--green); color:var(--green);">Workshop</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Girls Inc. — GenAI Safety</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2026</div>
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">Demo</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Comienza con un Sueño — STEM Fair at UCSD</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2026</div>
+        <span class="badge" style="border-color:var(--green); color:var(--green);">Tour</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Lab Tour — UCSD Regents Scholars</div>
+      </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge" style="border-color:var(--green); color:var(--green);">Workshop</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Girls Inc. — Block Based Coding for Fun</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">Demo</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">STEM for ALL Leadership Symposium — Lab Demo</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2025</div>
+        <span class="badge" style="border-color:var(--green); color:var(--green);">Tour</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Lab Tour — UCSD Regents Scholars</div>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">CTF</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Girls Inc. CyberSafety CTF</div>
+        <div class="pub-authors" style="margin-top:4px; margin-bottom:0;">OSInt &amp; Computational Thinking</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge" style="border-color:var(--green); color:var(--green);">Workshop</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Blue Heart Foundation — STEAM Program: Source Validation Workshop</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">CTF</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">F.A.N.C.Y Teen Girls Conference — Cyber Safety (OSINT) CTF</div>
+      </div>
+    </div>
+
+    <div class="event-entry">
+      <div class="pub-meta">
+        <div class="pub-year">2024</div>
+        <span class="badge" style="border-color:var(--green); color:var(--green);">Tour</span>
+      </div>
+      <div>
+        <div class="pub-venue-type">Community Event</div>
+        <div class="event-title">Lab Tour — UCSD Regents Scholars</div>
       </div>
     </div>
 
   </div>
 
 </div>
+</main>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -192,6 +451,7 @@
       <li><a href="researchers.html">Researchers</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
+      <li><a href="community.html">Community</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
