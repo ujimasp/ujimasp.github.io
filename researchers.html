@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Researchers — Ujima S&P</title>
+  <meta name="description" content="Meet the researchers of the Ujima Security and Privacy Research Group at UC San Diego."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    /* ── Researcher card grid ── */
+    .researcher-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .researcher-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-dim);
+      transition: border-color 0.25s;
+      overflow: hidden;
+    }
+    .researcher-card:hover { border-color: var(--border); }
+
+    .researcher-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      background: #1a1a1a;
+      /* placeholder pattern */
+    }
+
+    .researcher-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #111 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .researcher-photo-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(45deg, rgba(212,175,55,0.04) 0, rgba(212,175,55,0.04) 1px, transparent 0, transparent 50%);
+      background-size: 20px 20px;
+    }
+
+    .researcher-initials {
+      font-size: 36px;
+      font-weight: 800;
+      color: rgba(212,175,55,0.4);
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.05em;
+    }
+
+    .researcher-info {
+      padding: 16px 18px 18px;
+      border-top: 1px solid var(--border-dim);
+    }
+
+    .researcher-role {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .researcher-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .researcher-bio {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .researcher-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,175,55,0.3);
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+    .researcher-link:hover { border-color: var(--gold); }
+
+    /* ── PI card (larger) ── */
+    .pi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      margin-bottom: 48px;
+      overflow: hidden;
+    }
+
+    .pi-photo-wrap {
+      width: 240px;
+      aspect-ratio: 3/4;
+      background: #111;
+      overflow: hidden;
+    }
+
+    .pi-photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .pi-photo-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, #111, #1c1c1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pi-info {
+      padding: 32px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 1px solid var(--border-dim);
+    }
+
+    .pi-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pi-tag::before { content: ''; width: 16px; height: 1px; background: var(--green); }
+
+    .pi-name {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .pi-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .pi-bio {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    @media (max-width: 640px) {
+      .pi-card { grid-template-columns: 1fr; }
+      .pi-photo-wrap { width: 100%; aspect-ratio: 1/1; }
+      .pi-info { border-left: none; border-top: 1px solid var(--border-dim); }
+      .researcher-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Navigation ─────────────────────────────────────────── -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Ujima S&P Logo"/>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">UJIMA</span>
+        <span class="nav-logo-sub">Security &amp; Privacy</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html" class="active">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Join Us</a>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────── -->
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="page-header-tag">The Team</div>
+    <h1>Our <span>Researchers</span></h1>
+    <p>A collective of PhD students, master's students, undergraduates, and collaborators working together to make security and privacy more equitable.</p>
+  </div>
+
+  <!-- ─── Principal Investigator ──────────────────────────── -->
+  <div class="section-label" style="margin-bottom:16px;">Principal Investigator</div>
+
+  <div class="pi-card">
+    <div class="pi-photo-wrap">
+      <!-- REPLACE src with Dr. Munyaka's headshot path when available -->
+      <!-- <img src="assets/headshots/munyaka.jpg" alt="Dr. Imani N. S. Munyaka"/> -->
+      <div class="pi-photo-placeholder">
+        <span style="font-size:52px; font-weight:800; color:rgba(212,175,55,0.3);">IM</span>
+      </div>
+    </div>
+    <div class="pi-info">
+      <div class="pi-tag">Principal Investigator</div>
+      <div class="pi-name">Dr. Imani N. S. Munyaka</div>
+      <div class="pi-title">Assistant Professor · UC San Diego</div>
+      <!-- REPLACE with actual bio -->
+      <p class="pi-bio">
+        [Bio placeholder — replace with Dr. Munyaka's bio. She leads the Ujima Security and Privacy Research Group at UC San Diego, with a focus on security and privacy for marginalized communities.]
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="http://imanimunyaka.com" target="_blank" rel="noopener" class="researcher-link">Personal Website →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PhD Students ─────────────────────────────────────── -->
+  <div class="section-label" style="margin-bottom:16px;">PhD Students</div>
+
+  <div class="researcher-grid" style="margin-bottom:48px;">
+
+    <!-- Mya Bolds -->
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder">
+        <!-- REPLACE with: <img class="researcher-photo" src="assets/headshots/mya-bolds.jpg" alt="Mya Bolds"/> -->
+        <span class="researcher-initials">MB</span>
+      </div>
+      <div class="researcher-info">
+        <div class="researcher-role">PhD Student</div>
+        <div class="researcher-name">Mya Bolds</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="http://www.myabolds.me" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+
+    <!-- Alexis Flores -->
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder">
+        <!-- REPLACE with: <img class="researcher-photo" src="assets/headshots/alexis-flores.jpg" alt="Alexis Flores"/> -->
+        <span class="researcher-initials">AF</span>
+      </div>
+      <div class="researcher-info">
+        <div class="researcher-role">PhD Student</div>
+        <div class="researcher-name">Alexis (Alex) Flores</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="https://amoralesflor01.github.io/" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+
+    <!-- Naba Rizvi -->
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder">
+        <!-- REPLACE with: <img class="researcher-photo" src="assets/headshots/naba-rizvi.jpg" alt="Naba Rizvi"/> -->
+        <span class="researcher-initials">NR</span>
+      </div>
+      <div class="researcher-info">
+        <div class="researcher-role">PhD Student</div>
+        <div class="researcher-name">Naba Rizvi</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="https://nrizvi.github.io/" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── Current Collaborators (2024–2025) ────────────────── -->
+  <div class="section-label" style="margin-bottom:16px;">Current Collaborators 2024–2025</div>
+
+  <div style="margin-bottom:12px;">
+    <span class="badge gold" style="margin-bottom:8px;">Master's Students</span>
+  </div>
+  <div class="researcher-grid" style="margin-bottom:32px;">
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder">
+        <span class="researcher-initials">JJ</span>
+      </div>
+      <div class="researcher-info">
+        <div class="researcher-role">Master's Student</div>
+        <div class="researcher-name">Jay Jhaveri</div>
+        <div class="researcher-bio">2024 Graduate</div>
+        <a href="https://jayjhaveri190600.web.app/" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:12px;">
+    <span class="badge green" style="margin-bottom:8px;">Undergraduate Students</span>
+  </div>
+  <div class="researcher-grid" style="margin-bottom:32px;">
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder"><span class="researcher-initials">BD</span></div>
+      <div class="researcher-info">
+        <div class="researcher-role">Undergraduate</div>
+        <div class="researcher-name">Blanca De Leon</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="https://github.com/bdeleon15" target="_blank" rel="noopener" class="researcher-link">GitHub →</a>
+      </div>
+    </div>
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder"><span class="researcher-initials">CN</span></div>
+      <div class="researcher-info">
+        <div class="researcher-role">Undergraduate</div>
+        <div class="researcher-name">Chuong Nguyen</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="https://chuongnguyen26.github.io/chuongnguyen.github.io/" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder"><span class="researcher-initials">AS</span></div>
+      <div class="researcher-info">
+        <div class="researcher-role">Undergraduate</div>
+        <div class="researcher-name">Andrew Smithwick</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="https://wishingwell13.github.io/" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:12px;">
+    <span class="badge" style="margin-bottom:8px;">High School Students</span>
+  </div>
+  <div class="researcher-grid" style="margin-bottom:56px;">
+    <div class="researcher-card">
+      <div class="researcher-photo-placeholder"><span class="researcher-initials">AK</span></div>
+      <div class="researcher-info">
+        <div class="researcher-role">High School Student</div>
+        <div class="researcher-name">Ameya K.</div>
+        <div class="researcher-bio">[Research interests placeholder]</div>
+        <a href="http://ameyaki.github.io" target="_blank" rel="noopener" class="researcher-link">Website →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Alumni ─────────────────────────────────────────────── -->
+  <div class="section-label" style="margin-bottom:20px;">Alumni</div>
+  <div style="border:1px solid var(--border-dim); padding:28px 32px; background:var(--card-bg); margin-bottom:64px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:24px;">
+
+      <div>
+        <div class="badge gold" style="margin-bottom:12px;">Master's</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Shreyas L. <span style="color:rgba(240,237,230,0.3);">('24)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Akshay Mehta <span style="color:rgba(240,237,230,0.3);">('22)</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="badge green" style="margin-bottom:12px;">Undergraduate</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Xinyi Ai <span style="color:rgba(240,237,230,0.3);">('23)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Latanya Khissy Beyniouah</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Anish Devineni</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Ayan Gaur</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Malia Henry <span style="color:rgba(240,237,230,0.3);">('22)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Manuri Jayarante</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Runpeng J. <span style="color:rgba(240,237,230,0.3);">('24)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Isha Khirwadkar</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Chun-Chieh (Jeff) Kuo</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Wanting Mao <span style="color:rgba(240,237,230,0.3);">('24)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Haaset Owens</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Anmol Saxena <span style="color:rgba(240,237,230,0.3);">('22)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Ivan Smith <span style="color:rgba(240,237,230,0.3);">('24)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Natasha Tran</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Xinyi (Cindy) Wang <span style="color:rgba(240,237,230,0.3);">('24)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Joyce Weng</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Joanna Yang</li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Xiaotong Zeng</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="badge" style="margin-bottom:12px;">High School</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Claire L. <span style="color:rgba(240,237,230,0.3);">('23)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">Raunak M. <span style="color:rgba(240,237,230,0.3);">('25)</span></li>
+          <li style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);">William W. <span style="color:rgba(240,237,230,0.3);">('24)</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<!-- ─── Footer ──────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-text">© 2025 Ujima S&P · UC San Diego · <a href="https://www.ujimasp.com">ujimasp.com</a></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

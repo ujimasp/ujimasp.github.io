@@ -1,115 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Publications – Ujima Lab</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications — Ujima S&P</title>
+  <meta name="description" content="Publications from the Ujima Security and Privacy Research Group."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link rel="stylesheet" href="assets/style.css"/>
 </head>
-
 <body>
 
-<header>
-  <img src="assets/logo.png" alt="Ujima Lab Logo">
-  <h1>Publications</h1>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="people.html">People</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="community.html">Community</a>
-  <a href="positions.html">Open Positions</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Ujima S&P Logo"/>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">UJIMA</span>
+        <span class="nav-logo-sub">Security &amp; Privacy</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Join Us</a>
+  </div>
 </nav>
 
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="page-header-tag">Our Work</div>
+    <h1>Publica<span>tions</span></h1>
+    <p>Peer-reviewed research from the Ujima S&P group. We've been building since July 2021 — every paper is a step toward more equitable security and privacy.</p>
+  </div>
 
-<section>
-  <h2>Publications</h2>
+  <!-- ─── Publication list ─────────────────────────────────── -->
+  <!--
+    HOW TO FILL IN:
+    For each publication, replace the placeholder text inside each .pub-entry.
+    Fields:
+      - [YEAR]        → e.g. 2024
+      - [Venue]       → e.g. CHI, USENIX Security, CCS, SOUPS
+      - [Venue Type]  → Conference / Workshop / Journal
+      - [Full citation title]
+      - [Author 1], [Author 2], etc.
+      - href="#"      → replace with DOI or PDF link
+  -->
 
-  <ul class="pub-list">
-    <li>
-      Andrew Smithwick, Chuong Nguyen, Emily Gorial, Natasha Tran, Alexis Morales Flores,
-      Imani N. S. Munyaka.
-      <strong>“Parent seeking Roblox Safety Help: Comparing Parental Roblox Concerns to Roblox Offerings.”</strong>
-      ISTAS ’24 (2024)
-    </li>
+  <div style="display:flex; flex-direction:column; gap:0; margin-bottom:72px;">
 
-    <li>
-      Alexis Morales Flores, Michael He, William Wu, Imani N. S. Munyaka.
-      <strong>“A License to Prey: Investigating the Impact of Digital Loan App Regulations on Permission Requests and Privacy Policies in the Kenyan Market.”</strong>
-      ISTAS ’24 (2024)
-    </li>
+    <!-- Publication 1 -->
+    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          [Author 1], [Author 2], [Author 3], Imani N. S. Munyaka
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-    <li>
-      Naba Rizvi, William Wu, Mya Bolds, Raunak Mondal, Andrew Begel, Imani Munyaka.
-      <strong>“Are Robots Ready to Deliver Autism Inclusion?: A Critical Review.”</strong>
-      Proceedings of the ACM CHI Conference on Human Factors in Computing Systems (2024)
-    </li>
+    <!-- Publication 2 -->
+    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          [Author 1], [Author 2], Imani N. S. Munyaka
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-    <li>
-      Imani Munyaka, Daniel A. Delgado, Juan Gilbert, Jaime Ruiz, Patrick Traynor.
-      <strong>“‘I used to live in Florida’: Exploring the Impact of Spam Call Warning Accuracy on Callee Decision-Making.”</strong>
-      Symposium on Usable Security and Privacy (USEC 2024)
-    </li>
+    <!-- Publication 3 -->
+    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          [Author 1], [Author 2], Imani N. S. Munyaka
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-    <li>
-      Imani Munyaka, Zahra Ashktorab, Casey Dugan, J Johnson, Qian Pan.
-      <strong>“Decision Making Strategies and Team Efficacy in Human-AI Teams.”</strong>
-      Proceedings of the ACM on Human-Computer Interaction CSCW (2023): 1–24
-    </li>
+    <!-- Publication 4 -->
+    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          Imani N. S. Munyaka, [Author 2], [Author 3]
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-    <li>
-      Enze Liu, Lu Sun, Alex Bellon, Grant Ho, Geofrey M. Voelker, Stefan Savage, Imani Munyaka.
-      <strong>“Understanding the Viability of Gmail's Origin Indicator for Identifying the Sender.”</strong>
-      Nineteenth Symposium on Usable Privacy and Security (SOUPS 2023), 77–95
-    </li>
+    <!-- Publication 5 -->
+    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          [Author 1], Imani N. S. Munyaka
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-    <li>
-      Imani Munyaka, E. Hargittai, Elissa Redmiles.
-      <strong>“The Misinformation Paradox: Older Adults are Cynical about News Media, but Engage with It Anyway.”</strong>
-      Journal of Online Trust and Safety 1 (4)
-    </li>
-  </ul>
-</section>
+    <!-- Publication 6 -->
+    <div class="pub-entry" style="border-bottom:1px solid var(--border-dim); padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          [Author 1], [Author 2], Imani N. S. Munyaka
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-<section>
-  <h2>Workshop Papers</h2>
+    <!-- Publication 7 -->
+    <div class="pub-entry" style="padding:28px 0; display:grid; grid-template-columns:80px 1fr; gap:24px; align-items:start;">
+      <div style="text-align:right;">
+        <div style="font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:var(--gold);">[YEAR]</div>
+        <span class="badge" style="margin-top:6px; display:inline-block;">[Venue]</span>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">[Venue Type]</div>
+        <div style="font-size:16px; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:8px;">
+          [Publication Title Placeholder — replace with full paper title]
+        </div>
+        <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; line-height:1.6;">
+          Imani N. S. Munyaka, [Author 2]
+        </div>
+        <a href="#" class="researcher-link" style="font-size:10px;">PDF / DOI →</a>
+      </div>
+    </div>
 
-  <ul class="pub-list">
-    <li>
-      Molly Maclaren, Jared Jose, Runpeng Jian, Zheng Zeng, Jay Jhaveri, Imani N. S. Munyaka.
-      <strong>“Work in Progress: Privacy Protection for Children 13+ in Virtual Worlds.”</strong>
-      Presented at the 8th Workshop on Inclusive Privacy and Security (WIPS) (2023)
-    </li>
-  </ul>
-</section>
+  </div>
 
-<section>
-  <h2>Events Hosted</h2>
+</div>
 
-  <ul class="event-list">
-    <li>
-      <strong>Girls Inc. CyberSafety CTF</strong>  
-      (OSINT, Computational Thinking) (2024)
-    </li>
-
-    <li>
-      <strong>Blue Heart Foundation – STEAM Program</strong>  
-      Source Validation Workshop (2024)
-    </li>
-
-    <li>
-      <strong>F.A.N.C.Y Teen Girls Conference</strong>  
-      Cyber Safety (OSINT) CTF (2024)
-    </li>
-  </ul>
-</section>
-
-  
-<footer>
-  <footer>
-  Contact us: <strong>ujimaresearch@gmail.com</strong>
-</footer>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-text">© 2025 Ujima S&P · UC San Diego · <a href="https://www.ujimasp.com">ujimasp.com</a></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </footer>
 
 </body>

@@ -1,74 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Community – Ujima Lab</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community — Ujima S&P</title>
+  <meta name="description" content="Community resources from the Ujima Security and Privacy Research Group — links for learning online safety, coding, and security."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .resource-section {
+      margin-bottom: 48px;
+    }
 
+    .resource-section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .resource-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-dim);
+    }
+
+    .resource-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resource-list li {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .resource-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border-dim);
+      padding: 14px 18px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resource-link::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--green);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .resource-link:hover {
+      border-color: var(--border);
+      background: rgba(255,255,255,0.05);
+    }
+    .resource-link:hover::before { opacity: 1; }
+
+    .resource-link-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .resource-link-arrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--green);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .resource-link:hover .resource-link-arrow {
+      transform: translateX(4px);
+    }
+
+    .cta-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, var(--gold), var(--green));
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+    }
+  </style>
+</head>
 <body>
 
-<header>
-  <img src="assets/logo.png" alt="Ujima Lab Logo">
-  <h1>Community</h1>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="people.html">People</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="community.html">Community</a>
-  <a href="positions.html">Open Positions</a>
+<!-- ─── Navigation ─────────────────────────────────────────── -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Ujima S&P Logo"/>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">UJIMA</span>
+        <span class="nav-logo-sub">Security &amp; Privacy</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="community.html" class="active">Community</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Join Us</a>
+  </div>
 </nav>
 
-<div class="container">
-  <h2>Community Engagement</h2>
-  <p>Cick the form linked below to have the list emailed to you!</p>
-      <li><a href="https://forms.gle/UXkiosdHutKjEkeG6" target="_blank"> Get our list of links here</a></li>
+<!-- ─── Page Header ─────────────────────────────────────────── -->
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="page-header-tag">Resources</div>
+    <h1>Community <span>Engagement</span></h1>
+    <p>We believe security and privacy education should be accessible to everyone. Below are curated resources for learners of all ages — games, coding tools, and more.</p>
+  </div>
 
-</div>
+  <!-- ─── Get the full list CTA ────────────────────────────── -->
+  <div class="cta-box">
+    <div>
+      <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.18em; color:var(--green); text-transform:uppercase; margin-bottom:8px;">// Want the full list?</div>
+      <div style="font-size:20px; font-weight:800; color:var(--white); margin-bottom:6px;">Get Our Curated Resource List</div>
+      <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); line-height:1.7;">
+        Fill out the short form and we'll email you our complete, regularly updated list of community security &amp; privacy resources.
+      </div>
+    </div>
+    <a href="https://forms.gle/UXkiosdHutKjEkeG6" target="_blank" rel="noopener" class="btn-primary" style="white-space:nowrap;">
+      Get the List →
+    </a>
+  </div>
 
-<div class = "container">
-  <h2>Links to Fun Websites for Learning</h2>
+  <!-- ─── Resource Categories Grid ────────────────────────── -->
+  <div class="section-label" style="margin-bottom:28px;">Learning Resources</div>
 
-  <h3>Learn Online Safety w/ Games</h3>
-  <ul class="resource-list">
-    <li><a href="https://beinternetawesome.withgoogle.com/en_us/interland/" target="_blank">Interland – Google: Be Internet Awesome</a></li>
-    <li><a href="https://www.netsmartzkids.org/activities/interactive/" target="_blank">NetSmartzKids Interactive Activities</a></li>
-    <li><a href="https://sos.fbi.gov/en/" target="_blank">FBI Safe Online Surfing</a></li>
-    <li><a href="https://www.commonsense.org/education/digital-passport" target="_blank">Common Sense Media: Digital Passport</a></li>
-    <li><a href="https://www.abcya.com/games/cyber_five_internet_safety" target="_blank">ABCya: Cyber Five Internet Safety</a></li>
-  </ul>
+  <div class="category-grid">
 
-  <h3>Learn to Code w/ Games</h3>
-  <ul class="resource-list">
-    <li><a href="https://blockly.games/" target="_blank">Blockly Games</a></li>
-    <li><a href="https://coddy.tech/" target="_blank">Coddy</a></li>
-    <li><a href="https://codecombat.com/" target="_blank">CodeCombat</a></li>
-    <li><a href="https://www.tynker.com/" target="_blank">Tynker</a></li>
-  </ul>
+    <!-- Online Safety Games -->
+    <div class="resource-section">
+      <div class="resource-section-title">Learn Online Safety w/ Games</div>
+      <ul class="resource-list">
+        <li>
+          <a href="https://beinternetawesome.withgoogle.com/en_us/interland/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Interland – Be Internet Awesome</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.netsmartzkids.org/activities/interactive/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">NetSmartzKids Interactive Activities</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://sos.fbi.gov/en/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">FBI Safe Online Surfing</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.commonsense.org/education/digital-passport" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Common Sense Media: Digital Passport</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.abcya.com/games/cyber_five_internet_safety" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">ABCya: Cyber Five Internet Safety</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <h3>Learn to Code w/ Scratch</h3>
-  <ul class="resource-list">
-    <li><a href="https://scratch.mit.edu/" target="_blank">Scratch</a></li>
-    <li><a href="https://blocklycodelabs.dev/" target="_blank">Blockly Code Labs</a></li>
-  </ul>
+    <!-- Learn to Code w/ Games -->
+    <div class="resource-section">
+      <div class="resource-section-title">Learn to Code w/ Games</div>
+      <ul class="resource-list">
+        <li>
+          <a href="https://blockly.games/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Blockly Games</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://coddy.tech/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Coddy</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://codecombat.com/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">CodeCombat</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tynker.com/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Tynker</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <h3>Learn Security</h3>
-  <ul class="resource-list">
-    <li><a href="https://kc7cyber.com/" target="_blank">K7 Cyber Range</a></li>
-  </ul>
+    <!-- Learn to Code w/ Scratch -->
+    <div class="resource-section">
+      <div class="resource-section-title">Learn to Code w/ Scratch</div>
+      <ul class="resource-list">
+        <li>
+          <a href="https://scratch.mit.edu/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Scratch</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://blocklycodelabs.dev/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Blockly Code Labs</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <h3>Worksheets:</h3>
-  <ul class="resource-list">
-    <li><a href="https://bobmckay.com/i-t-support-networking/security/caesar-cipher-wheel-printable-pdf/" target="_blank">Cipher Wheel</a></li>
-  </ul>
-</div>
+    <!-- Learn Security -->
+    <div class="resource-section">
+      <div class="resource-section-title">Learn Security</div>
+      <ul class="resource-list">
+        <li>
+          <a href="https://kc7cyber.com/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">KC7 Cyber Range</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  
-<footer>
-  Contact us: <strong>ujimaresearch@gmail.com</strong>
+    <!-- Worksheets -->
+    <div class="resource-section">
+      <div class="resource-section-title">Worksheets</div>
+      <ul class="resource-list">
+        <li>
+          <a href="https://bobmckay.com/i-t-support-networking/security/caesar-cipher-wheel-printable-pdf/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-link-name">Cipher Wheel (Printable PDF)</span>
+            <span class="resource-link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- end category-grid -->
+
+  <!-- ─── Suggest a resource ───────────────────────────────── -->
+  <div style="border:1px solid var(--border-dim); padding:28px 32px; background:var(--card-bg); margin-top:48px; margin-bottom:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+    <div>
+      <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.15em; color:var(--green); text-transform:uppercase; margin-bottom:6px;">// Know a great resource?</div>
+      <div style="font-size:16px; font-weight:700; color:var(--white);">Suggest a Resource</div>
+      <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); margin-top:4px;">Have a tool, game, or site we should add? Reach out and let us know.</div>
+    </div>
+    <a href="mailto:ujimaresearch@gmail.com" class="btn-outline">Email Us →</a>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<!-- ─── Footer ──────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      © 2025 Ujima S&P · UC San Diego ·
+      <a href="https://www.ujimasp.com">ujimasp.com</a> ·
+      <a href="mailto:ujimaresearch@gmail.com">ujimaresearch@gmail.com</a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </footer>
 
 </body>

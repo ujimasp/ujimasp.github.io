@@ -1,43 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ujima Security & Privacy Research Lab</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ujima S&P — Security & Privacy Research</title>
+  <meta name="description" content="Ujima Security and Privacy Research Group — focusing on security and privacy topics that impact marginalized communities. Led by Dr. Imani N. S. Munyaka at UC San Diego."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link rel="stylesheet" href="assets/style.css"/>
 </head>
-
 <body>
 
-<header>
-  <img src="assets/logo.png" alt="Ujima Lab Logo">
-  <h1>Ujima Security & Privacy Research Lab</h1>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="people.html">People</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="community.html">Community</a>
-  <a href="positions.html">Open Positions</a>
+<!-- ─── Navigation ─────────────────────────────────────────── -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Ujima S&P Logo"/>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">UJIMA</span>
+        <span class="nav-logo-sub">Security &amp; Privacy</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Join Us</a>
+  </div>
 </nav>
-  
-<div class="container">
-  <h2>About Us</h2>
-<p>We focus on security and privacy topics that impact marginalized or historically ignored communities. Ujima is a Swahili word that is often translated as collective work and responsibility. We apply this principle to our research projects by working with end-users and experts from various disciplines to improve the security and privacy experiences of various communities.</p> 
-<p>Led By Dr. Munyaka</p>
-</div>
-  
-<div class="container">
-  <h2>Announcements & News</h2>
-  
-  <ul>
-    <li><strong>[11/14/2025]</strong> Website launched!</li>
-  </ul>
-</div>
 
-<footer>
-  Contact us: <strong>ujimaresearch@gmail.com</strong> · University of California San Diego / Computer Science and Engineering Department 
+<!-- ─── Hero ───────────────────────────────────────────────── -->
+<section style="position:relative; z-index:1;">
+  <div class="page-wrap" style="padding-top:72px; padding-bottom:56px; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+
+    <div>
+      <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.2em; color:var(--green); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:8px;">
+        <span style="width:24px; height:1px; background:var(--green); display:inline-block;"></span>
+        Security &amp; Privacy Research Group
+      </div>
+
+      <h1 style="font-size:52px; font-weight:800; line-height:1.04; letter-spacing:-0.025em; margin-bottom:22px;">
+        Build<br>
+        <span style="color:var(--gold);">Collectively.</span><br>
+        Protect <span style="color:var(--green);">All.</span>
+      </h1>
+
+      <p style="font-family:'Space Mono',monospace; font-size:12px; line-height:1.9; color:var(--muted); max-width:420px; margin-bottom:32px;">
+        We focus on security and privacy topics that impact marginalized and historically ignored communities — applying the Ujima principle of collective work and responsibility to research.
+      </p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px;">
+        <a href="projects.html" class="btn-primary">Explore Research</a>
+        <a href="researchers.html" class="btn-outline">Meet the Team</a>
+      </div>
+
+      <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.14em; color:rgba(240,237,230,0.35); text-transform:uppercase; border-left:2px solid var(--gold); padding-left:12px;">
+        Led by Dr. Imani N. S. Munyaka &nbsp;·&nbsp; UC San Diego
+      </div>
+    </div>
+
+    <!-- Globe SVG -->
+    <div style="display:flex; align-items:center; justify-content:center; padding:24px 0;">
+      <svg viewBox="0 0 300 300" width="300" height="300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Outer rings -->
+        <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="110" fill="none" stroke="rgba(212,175,55,0.09)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="90"  fill="none" stroke="rgba(76,175,80,0.09)"  stroke-width="1"/>
+        <!-- Main globe circle -->
+        <circle cx="150" cy="150" r="100" fill="rgba(212,175,55,0.02)" stroke="rgba(212,175,55,0.22)" stroke-width="1.5"/>
+        <!-- Lat/lon lines -->
+        <line x1="150" y1="50"  x2="150" y2="250" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/>
+        <line x1="50"  y1="150" x2="250" y2="150" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/>
+        <ellipse cx="150" cy="150" rx="100" ry="40"  fill="none" stroke="rgba(212,175,55,0.09)" stroke-width="0.5"/>
+        <ellipse cx="150" cy="150" rx="100" ry="70"  fill="none" stroke="rgba(212,175,55,0.07)" stroke-width="0.5"/>
+        <ellipse cx="150" cy="150" rx="55"  ry="100" fill="none" stroke="rgba(212,175,55,0.07)" stroke-width="0.5"/>
+        <!-- Network nodes -->
+        <circle cx="90"  cy="110" r="5"   fill="var(--green)"  opacity="0.9"/>
+        <circle cx="195" cy="130" r="4"   fill="var(--green)"  opacity="0.7"/>
+        <circle cx="125" cy="185" r="4"   fill="var(--gold)"   opacity="0.8"/>
+        <circle cx="175" cy="90"  r="3.5" fill="var(--white)"  opacity="0.45"/>
+        <circle cx="108" cy="162" r="3"   fill="var(--white)"  opacity="0.35"/>
+        <circle cx="180" cy="175" r="3"   fill="var(--gold)"   opacity="0.6"/>
+        <circle cx="150" cy="50"  r="3.5" fill="var(--gold)"   opacity="0.8"/>
+        <circle cx="150" cy="250" r="3.5" fill="var(--gold)"   opacity="0.8"/>
+        <!-- Network connections -->
+        <line x1="90"  y1="110" x2="195" y2="130" stroke="rgba(76,175,80,0.45)"    stroke-width="0.9"/>
+        <line x1="90"  y1="110" x2="125" y2="185" stroke="rgba(212,175,55,0.4)"    stroke-width="0.9"/>
+        <line x1="195" y1="130" x2="175" y2="90"  stroke="rgba(240,237,230,0.22)"  stroke-width="0.7"/>
+        <line x1="125" y1="185" x2="180" y2="175" stroke="rgba(212,175,55,0.35)"   stroke-width="0.7"/>
+        <line x1="90"  y1="110" x2="150" y2="50"  stroke="rgba(212,175,55,0.2)"    stroke-width="0.5"/>
+        <line x1="195" y1="130" x2="150" y2="50"  stroke="rgba(212,175,55,0.2)"    stroke-width="0.5"/>
+        <line x1="175" y1="90"  x2="150" y2="50"  stroke="rgba(212,175,55,0.15)"   stroke-width="0.5"/>
+        <line x1="180" y1="175" x2="150" y2="250" stroke="rgba(212,175,55,0.2)"    stroke-width="0.5"/>
+        <line x1="108" y1="162" x2="125" y2="185" stroke="rgba(76,175,80,0.3)"     stroke-width="0.6"/>
+        <!-- Center label -->
+        <text x="150" y="155" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" fill="rgba(212,175,55,0.5)" letter-spacing="3">UJIMA</text>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── Stats (commented out — update when ready) ──────────── -->
+<!--
+<section style="position:relative; z-index:1;">
+  <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);">
+    <div style="padding:28px 32px; border-right:1px solid var(--border-dim);">
+      <div style="font-size:32px; font-weight:800; color:var(--gold); line-height:1; margin-bottom:6px;">20+</div>
+      <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:rgba(240,237,230,0.4); text-transform:uppercase;">Researchers</div>
+    </div>
+    <div style="padding:28px 32px; border-right:1px solid var(--border-dim);">
+      <div style="font-size:32px; font-weight:800; color:var(--green); line-height:1; margin-bottom:6px;">15+</div>
+      <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:rgba(240,237,230,0.4); text-transform:uppercase;">Active Projects</div>
+    </div>
+    <div style="padding:28px 32px; border-right:1px solid var(--border-dim);">
+      <div style="font-size:32px; font-weight:800; color:var(--gold); line-height:1; margin-bottom:6px;">7</div>
+      <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:rgba(240,237,230,0.4); text-transform:uppercase;">Publications</div>
+    </div>
+    <div style="padding:28px 32px;">
+      <div style="font-size:32px; font-weight:800; color:var(--green); line-height:1; margin-bottom:6px;">2021</div>
+      <div style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.12em; color:rgba(240,237,230,0.4); text-transform:uppercase;">Founded</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+-->
+
+<!-- ─── Focus Areas ─────────────────────────────────────────── -->
+<section style="position:relative; z-index:1; padding:64px 0;">
+  <div class="page-wrap">
+    <div class="section-label">Focus Areas</div>
+    <h2 class="section-title" style="margin-bottom:32px;">Research That Centers Community</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+
+      <div class="card">
+        <div class="card-tag">Privacy</div>
+        <div class="card-title">Marginalized Community Privacy</div>
+        <div class="card-body">Studying how privacy risks disproportionately affect communities often overlooked by mainstream security research.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Security</div>
+        <div class="card-title">Inclusive Security Design</div>
+        <div class="card-body">Building tools and frameworks that make digital security accessible and equitable for all people.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Community</div>
+        <div class="card-title">Participatory Research Methods</div>
+        <div class="card-body">Working directly with end-users and cross-disciplinary experts to ensure research has real-world impact.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── About / Mission ─────────────────────────────────────── -->
+<section style="position:relative; z-index:1; padding:64px 0;">
+  <div class="page-wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+
+    <div>
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title" style="margin-bottom:18px;">What Does <span style="color:var(--gold);">Ujima</span> Mean?</h2>
+      <p style="font-family:'Space Mono',monospace; font-size:12px; line-height:1.9; color:var(--muted); margin-bottom:16px;">
+        Ujima is a Swahili word often translated as <em style="color:var(--white);">"collective work and responsibility."</em> It is the third principle of Kwanzaa, emphasizing community, mutual aid, and shared effort.
+      </p>
+      <p style="font-family:'Space Mono',monospace; font-size:12px; line-height:1.9; color:var(--muted); margin-bottom:28px;">
+        We apply this principle to our research by working with end-users and experts from various disciplines to improve the security and privacy experiences of communities that are too often left out of the conversation.
+      </p>
+      <a href="researchers.html" class="btn-outline">Meet the Team →</a>
+    </div>
+
+    <div style="border:1px solid var(--border); padding:32px; background:var(--card-bg);">
+      <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.15em; color:var(--green); text-transform:uppercase; margin-bottom:20px;">// Core Principles</div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <div style="width:3px; height:40px; background:var(--gold); flex-shrink:0; margin-top:3px;"></div>
+          <div>
+            <div style="font-size:13px; font-weight:700; margin-bottom:4px;">Collective Work</div>
+            <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); line-height:1.6;">Research built with communities, not just about them.</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <div style="width:3px; height:40px; background:var(--green); flex-shrink:0; margin-top:3px;"></div>
+          <div>
+            <div style="font-size:13px; font-weight:700; margin-bottom:4px;">Shared Responsibility</div>
+            <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); line-height:1.6;">Security and privacy are rights, not privileges.</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <div style="width:3px; height:40px; background:var(--gold); flex-shrink:0; margin-top:3px;"></div>
+          <div>
+            <div style="font-size:13px; font-weight:700; margin-bottom:4px;">Interdisciplinary Impact</div>
+            <div style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); line-height:1.6;">Crossing disciplines to reach people where they are.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── Footer ──────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      © 2025 Ujima Security &amp; Privacy Research Group &nbsp;·&nbsp;
+      UC San Diego &nbsp;·&nbsp;
+      <a href="https://www.ujimasp.com">ujimasp.com</a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="researchers.html">Researchers</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </footer>
 
 </body>
