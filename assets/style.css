@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 /* ─── Reset & Base ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +36,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--black);
   color: var(--white);
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;  /* readable body font */
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -60,6 +60,19 @@ body::before {
   background-size: 40px 40px, 40px 40px, 40px 40px;
   pointer-events: none;
   z-index: 0;
+}
+
+/* ─── Typography — Outfit for headings, DM Sans for body ───── */
+h1, h2, h3, h4, h5, h6,
+.nav-logo-name,
+.pillar-title,
+.section-title,
+.page-header h1,
+.card-title,
+.btn-primary,
+.btn-outline,
+.nav-cta {
+  font-family: 'Outfit', sans-serif;
 }
 
 /* ─── Layout ────────────────────────────────────────────────── */
@@ -116,9 +129,9 @@ body::before {
   color: var(--white);         /* 16.9:1 ✓ */
 }
 .nav-logo-sub {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 8px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.06em;
   color: var(--gold);          /* 7.6:1 ✓ */
   text-transform: uppercase;
   margin-top: 3px;
@@ -131,11 +144,11 @@ body::before {
 }
 
 .nav-links a {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   color: var(--muted);         /* 9.6:1 ✓ — was 0.55 opacity (borderline) */
   text-decoration: none;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: color 0.2s;
   padding-bottom: 2px;
@@ -156,7 +169,7 @@ body::before {
 }
 
 .nav-cta {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -180,9 +193,9 @@ body::before {
 }
 
 .page-header-tag {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.06em;
   color: var(--green);         /* 7.1:1 ✓ */
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -203,7 +216,7 @@ body::before {
 .page-header h1 span { color: var(--gold); }   /* 7.6:1 ✓ */
 
 .page-header p {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   line-height: 1.9;
   color: var(--muted);         /* 9.6:1 ✓ — was var(--muted) which was ok but now explicit */
@@ -219,7 +232,7 @@ body::before {
 
 /* ─── Buttons ───────────────────────────────────────────────── */
 .btn-primary {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -240,7 +253,7 @@ body::before {
 .btn-primary:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
 
 .btn-outline {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -277,9 +290,9 @@ body::before {
 .card:hover::before { opacity: 1; }
 
 .card-tag {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 9px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   color: var(--green);         /* 7.1:1 ✓ */
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -294,7 +307,7 @@ body::before {
 }
 
 .card-body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   line-height: 1.75;
   color: var(--muted);         /* 9.6:1 ✓ */
@@ -321,7 +334,7 @@ body::before {
 }
 
 .footer-text {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   color: var(--muted-2);       /* 5.5:1 ✓ — was 0.30 opacity (2.4:1, FAILING) */
   letter-spacing: 0.08em;
@@ -337,7 +350,7 @@ body::before {
   list-style: none;
 }
 .footer-links a {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   color: var(--muted-2);       /* 5.5:1 ✓ — was 0.30 opacity (2.4:1, FAILING) */
   text-decoration: none;
@@ -350,9 +363,9 @@ body::before {
 
 /* ─── Section Labels ────────────────────────────────────────── */
 .section-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   color: var(--green);         /* 7.1:1 ✓ */
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -375,7 +388,7 @@ body::before {
 /* ─── Badges ────────────────────────────────────────────────── */
 .badge {
   display: inline-block;
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 9px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -393,7 +406,7 @@ body::before {
   left: 0;
   background: var(--gold);
   color: var(--black);
-  font-family: 'Space Mono', monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   font-weight: 700;
   padding: 10px 20px;
